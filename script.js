@@ -83,3 +83,39 @@ const menu = [
 for(let i = 0; i < menu.length; i++){
     console.log(describe(menu[i]));
 }
+
+console.log(document);
+
+const heading = document.getElementById("truck-name");
+
+console.log(heading);
+
+heading.textContent = "Isaiah's Taco Truck (now with horchata)";
+
+const tagline = document.getElementById("tagline");
+console.log(tagline);
+
+tagline.textContent = "Parked on Weber Ave. cash only";
+
+const statusLine = document.getElementById("status-line");
+
+statusLine.textContent = "Sold out";
+statusLine.classList.add("closed");
+
+statusLine.classList.remove("closed");
+
+const crewList = document.getElementById("crew-list");
+
+const firstItem = document.createElement("li");
+console.log(firstItem);
+firstItem.textContent = "Dave";
+
+crewList.appendChild(firstItem);
+
+const crew = ["Big Kevin", "Darnell"];
+
+for (let i = 0; i < crew.length; i++){
+    const item = document.createElement("li");
+    item.textContent = crew[i];
+    crewList.appendChild(item);
+}
